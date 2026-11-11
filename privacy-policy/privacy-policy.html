@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Privacy Policy for the HaiMeet app by HaldarAi: what we collect, how camera and microphone access works, and how to contact us." />
+  <title>Privacy Policy – HaiMeet</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #0d0f14;
+      --surface: #13161d;
+      --card: #181c25;
+      --border: #252a38;
+      --accent: #4f8ef7;
+      --accent2: #a78bfa;
+      --green: #34d399;
+      --text: #e2e8f0;
+      --muted: #7b869b;
+      --heading-font: 'Playfair Display', Georgia, serif;
+      --body-font: 'DM Sans', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--body-font);
+      font-size: 15px;
+      line-height: 1.75;
+      min-height: 100vh;
+    }
+
+    a:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 3px;
+      border-radius: 4px;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      background: linear-gradient(135deg, #0d0f14 0%, #131b2e 60%, #0d0f14 100%);
+      border-bottom: 1px solid var(--border);
+      padding: 60px 24px 48px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -80px; left: 50%;
+      transform: translateX(-50%);
+      width: 600px; height: 300px;
+      max-width: 100%;
+      background: radial-gradient(ellipse at center, rgba(79,142,247,0.18) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .badge {
+      display: inline-block;
+      background: rgba(79,142,247,0.12);
+      border: 1px solid rgba(79,142,247,0.35);
+      color: var(--accent);
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 4px 14px;
+      border-radius: 20px;
+      margin-bottom: 20px;
+    }
+    .hero h1 {
+      font-family: var(--heading-font);
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: -0.5px;
+      margin-bottom: 12px;
+    }
+    .hero h1 span { color: var(--accent); }
+    .hero p {
+      color: var(--muted);
+      max-width: 520px;
+      margin: 0 auto;
+      font-size: 14px;
+    }
+    .meta-row {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      margin-top: 24px;
+      flex-wrap: wrap;
+    }
+    .meta-item {
+      display: flex; align-items: center; gap: 6px;
+      font-size: 12px; color: var(--muted);
+    }
+    .meta-item svg { width: 14px; height: 14px; }
+
+    /* ── LAYOUT ── */
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+
+    /* ── AT A GLANCE CARD ── */
+    .glance-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px 30px;
+      margin-bottom: 48px;
+      position: relative;
+      overflow: hidden;
+    }
+    .glance-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--accent), var(--accent2));
+    }
+    .glance-header {
+      display: flex; align-items: center; gap: 12px;
+      margin-bottom: 22px;
+    }
+    .glance-logo {
+      background: linear-gradient(135deg, #1a237e, #0d47a1);
+      border-radius: 10px;
+      width: 42px; height: 42px;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+      font-family: var(--heading-font);
+      font-size: 18px;
+      color: #fff;
+      font-weight: 700;
+    }
+    .glance-header h2 {
+      font-family: var(--heading-font);
+      font-size: 1.15rem;
+      color: #fff;
+    }
+    .glance-header p { font-size: 12px; color: var(--muted); }
+    .check-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 10px;
+    }
+    .check-item {
+      display: flex; align-items: flex-start; gap: 10px;
+      padding: 10px 12px;
+      border-radius: 8px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(52,211,153,0.2);
+    }
+    .check-icon {
+      width: 18px; height: 18px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0; margin-top: 1px;
+      font-size: 10px;
+      background: rgba(52,211,153,0.15);
+      color: var(--green);
+    }
+    .check-text strong {
+      display: block; font-size: 12.5px; color: var(--text); margin-bottom: 1px;
+    }
+    .check-text span { font-size: 11.5px; color: var(--muted); }
+
+    /* ── TOC ── */
+    .toc {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 22px 26px;
+      margin-bottom: 40px;
+    }
+    .toc h3 {
+      font-family: var(--heading-font);
+      font-size: 0.95rem;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 14px;
+    }
+    .toc ol {
+      list-style: none;
+      counter-reset: toc;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 4px 20px;
+    }
+    .toc ol li { counter-increment: toc; }
+    .toc ol li a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 13px;
+      transition: color 0.2s;
+      display: flex; align-items: center; gap: 8px;
+    }
+    .toc ol li a::before {
+      content: counter(toc, decimal-leading-zero);
+      font-size: 10px;
+      color: var(--accent);
+      font-weight: 500;
+      flex-shrink: 0;
+    }
+    .toc ol li a:hover { color: var(--accent); }
+
+    /* ── POLICY SECTIONS ── */
+    .policy-section {
+      margin-bottom: 44px;
+      scroll-margin-top: 20px;
+    }
+    .section-label {
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-weight: 500;
+      margin-bottom: 6px;
+    }
+    .policy-section h2 {
+      font-family: var(--heading-font);
+      font-size: 1.45rem;
+      color: #fff;
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border);
+    }
+    .policy-section h3 {
+      font-size: 0.92rem;
+      font-weight: 500;
+      color: var(--accent2);
+      margin: 20px 0 8px;
+      display: flex; align-items: center; gap: 8px;
+    }
+    .policy-section h3::before {
+      content: '▸';
+      font-size: 9px;
+    }
+    .policy-section p { color: #b0bdd0; margin-bottom: 10px; font-size: 14.5px; }
+    .policy-section a { color: var(--accent); }
+    .policy-section ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 8px;
+    }
+    .policy-section ul li {
+      color: #b0bdd0;
+      font-size: 14.5px;
+      padding: 6px 0 6px 18px;
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+      position: relative;
+    }
+    .policy-section ul li::before {
+      content: '–';
+      position: absolute; left: 0;
+      color: var(--accent);
+    }
+    .policy-section ul li strong { color: var(--text); }
+    .policy-section p strong { color: var(--text); }
+
+    /* ── PERMISSION CARDS ── */
+    .perm-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+      gap: 12px;
+      margin-top: 14px;
+    }
+    .perm-card {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 16px;
+    }
+    .perm-card-icon {
+      font-size: 22px;
+      margin-bottom: 8px;
+    }
+    .perm-card h4 {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text);
+      margin-bottom: 4px;
+    }
+    .perm-card p { font-size: 12.5px; color: var(--muted); margin: 0; }
+    .perm-tag {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      padding: 1px 8px;
+      border-radius: 10px;
+      margin-bottom: 8px;
+      background: rgba(167,139,250,0.12);
+      color: var(--accent2);
+    }
+    .perm-tag.auto {
+      background: rgba(79,142,247,0.12);
+      color: var(--accent);
+    }
+
+    /* ── CONTACT CARD ── */
+    .contact-card {
+      background: linear-gradient(135deg, #131b2e, #0d0f14);
+      border: 1px solid rgba(79,142,247,0.25);
+      border-radius: 14px;
+      padding: 28px;
+      margin-top: 20px;
+      position: relative;
+      overflow: hidden;
+    }
+    .contact-card::after {
+      content: '';
+      position: absolute;
+      bottom: -40px; right: -40px;
+      width: 150px; height: 150px;
+      background: radial-gradient(circle, rgba(79,142,247,0.12), transparent 70%);
+      pointer-events: none;
+    }
+    .contact-card h3 {
+      font-family: var(--heading-font);
+      font-size: 1.1rem;
+      color: #fff;
+      margin: 0 0 16px;
+    }
+    .contact-card h3::before { content: none; }
+    .contact-row {
+      display: flex; flex-direction: column; gap: 8px;
+    }
+    .contact-item {
+      display: flex; align-items: center; gap: 10px;
+      font-size: 13.5px; color: #b0bdd0;
+    }
+    .contact-item svg { color: var(--accent); flex-shrink: 0; }
+    .contact-item a { color: var(--accent); text-decoration: none; word-break: break-all; }
+    .contact-item a:hover { text-decoration: underline; }
+
+    /* ── FOOTER ── */
+    footer {
+      text-align: center;
+      padding: 24px;
+      border-top: 1px solid var(--border);
+      font-size: 12px;
+      color: var(--muted);
+    }
+    footer span { color: var(--accent); }
+
+    @media (max-width: 600px) {
+      .check-grid, .perm-grid { grid-template-columns: 1fr; }
+      .toc ol { grid-template-columns: 1fr; }
+      .glance-card { padding: 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="badge">Legal Document</div>
+  <h1><span>HaiMeet</span> Privacy Policy</h1>
+  <p>How the HaiMeet app handles your information, your camera and microphone, and your choices.</p>
+  <div class="meta-row">
+    <div class="meta-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      Last Updated: November 11, 2026
+    </div>
+    <div class="meta-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      Effective Immediately
+    </div>
+    <div class="meta-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      Copyright © 2026 HaldarAi
+    </div>
+  </div>
+</header>
+
+<main class="container">
+
+  <!-- PRIVACY AT A GLANCE -->
+  <div class="glance-card">
+    <div class="glance-header">
+      <div class="glance-logo">H</div>
+      <div>
+        <h2>Privacy at a Glance</h2>
+        <p>The short version. The full policy follows below.</p>
+      </div>
+    </div>
+    <div class="check-grid">
+      <div class="check-item">
+        <div class="check-icon">✓</div>
+        <div class="check-text">
+          <strong>Camera and microphone only for calls</strong>
+          <span>Android asks you first. You can turn them off in Settings at any time.</span>
+        </div>
+      </div>
+      <div class="check-item">
+        <div class="check-icon">✓</div>
+        <div class="check-text">
+          <strong>No ads in the app</strong>
+          <span>The app has no advertising or analytics SDKs and does not use your advertising ID.</span>
+        </div>
+      </div>
+      <div class="check-item">
+        <div class="check-icon">✓</div>
+        <div class="check-text">
+          <strong>Encrypted connections</strong>
+          <span>The app loads HaiMeet over HTTPS only and blocks insecure content.</span>
+        </div>
+      </div>
+      <div class="check-item">
+        <div class="check-icon">✓</div>
+        <div class="check-text">
+          <strong>No access to your personal files</strong>
+          <span>No location, contacts, photos, files, SMS or call logs are requested.</span>
+        </div>
+      </div>
+      <div class="check-item">
+        <div class="check-icon">✓</div>
+        <div class="check-text">
+          <strong>Recordings stay off your device</strong>
+          <span>The app does not record or save your audio or video.</span>
+        </div>
+      </div>
+      <div class="check-item">
+        <div class="check-icon">✓</div>
+        <div class="check-text">
+          <strong>A real person to contact</strong>
+          <span>Our Grievance Officer’s name and email are listed in Section 10.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TABLE OF CONTENTS -->
+  <div class="toc">
+    <h3>Contents</h3>
+    <ol>
+      <li><a href="#s1">Information We Collect</a></li>
+      <li><a href="#s2">How We Use Your Information</a></li>
+      <li><a href="#s3">Disclosure of Your Information</a></li>
+      <li><a href="#s4">Retention and Deletion</a></li>
+      <li><a href="#s5">Security of Your Information</a></li>
+      <li><a href="#s6">Your Rights and Choices</a></li>
+      <li><a href="#s7">Links to Other Websites</a></li>
+      <li><a href="#s8">Children’s Privacy</a></li>
+      <li><a href="#s9">Changes to This Policy</a></li>
+      <li><a href="#s10">Grievance Officer</a></li>
+      <li><a href="#s11">Copyright</a></li>
+    </ol>
+  </div>
+
+  <!-- INTRO -->
+  <div class="policy-section">
+    <p>This Privacy Policy explains how <strong>HaiMeet</strong> (“we,” “us,” or “our”), a product of <strong>HaldarAi</strong>, collects, uses, and shares information when you use the HaiMeet Android app (package name <strong>com.HaldarAi.HaiMeet</strong>, the “App”) and the HaiMeet video meeting service at <a href="https://HaiMeet.vercel.app" target="_blank" rel="noopener">https://HaiMeet.vercel.app</a> (the “Service”) that the App displays.</p>
+    <p>By using the App, you agree to the practices described in this Policy. If you do not agree, please do not use the App.</p>
+  </div>
+
+  <!-- SECTION 1 -->
+  <div class="policy-section" id="s1">
+    <div class="section-label">Section 01</div>
+    <h2>Information We Collect</h2>
+
+    <h3>How the App Works</h3>
+    <p>The App opens the Service inside a secure in-app browser window. Meetings and their features run on the Service, so information you provide while using it is handled by the Service as described in this Policy.</p>
+
+    <h3>Personal Information</h3>
+    <p>The App itself does not collect your name, email address, or phone number. If the Service asks you for details such as a display name or meeting ID so you can join a meeting, we use them only to run that meeting.</p>
+
+    <h3>Audio and Video</h3>
+    <p>When you join a call and allow access, your camera and microphone streams are sent in real time to the other people in your meeting through the Service. The App itself does not record or save your audio or video on your device.</p>
+
+    <h3>Usage and Technical Data</h3>
+    <p>When the App connects to the Service, certain technical information is received automatically by the Service and its hosting provider, including your IP address, device model, Android version, in-app browser (WebView) version, language setting, the date and time of access, and diagnostic or error information.</p>
+
+    <h3>Device Permissions</h3>
+    <p>The App requests only the permissions it needs to run video meetings:</p>
+    <div class="perm-grid">
+      <div class="perm-card">
+        <div class="perm-card-icon">📷</div>
+        <span class="perm-tag">Asked at runtime</span>
+        <h4>Camera</h4>
+        <p>Lets you share your video in a meeting. Used only while a call is using video.</p>
+      </div>
+      <div class="perm-card">
+        <div class="perm-card-icon">🎤</div>
+        <span class="perm-tag">Asked at runtime</span>
+        <h4>Microphone</h4>
+        <p>Lets other participants hear you. Used only while a call is using audio.</p>
+      </div>
+      <div class="perm-card">
+        <div class="perm-card-icon">🌐</div>
+        <span class="perm-tag auto">Granted automatically</span>
+        <h4>Internet Access</h4>
+        <p>Needed to load the Service and connect your calls.</p>
+      </div>
+      <div class="perm-card">
+        <div class="perm-card-icon">📶</div>
+        <span class="perm-tag auto">Granted automatically</span>
+        <h4>Network State</h4>
+        <p>Lets the App see whether you are online, so calls can adapt to your connection.</p>
+      </div>
+      <div class="perm-card">
+        <div class="perm-card-icon">🔊</div>
+        <span class="perm-tag auto">Granted automatically</span>
+        <h4>Audio Settings</h4>
+        <p>Lets the App adjust audio routing during calls, for example switching between speaker and earpiece.</p>
+      </div>
+    </div>
+    <p style="margin-top:14px;">Camera and microphone access is granted only to the HaiMeet Service and to no other website. You can review or withdraw it at any time in Android <strong>Settings › Apps › HaiMeet › Permissions</strong>.</p>
+
+    <h3>What the App Does Not Access</h3>
+    <p>The App does not request access to your location, contacts, photos, files, SMS, or call logs, and it does not use your advertising ID.</p>
+
+    <h3>Advertising and Analytics</h3>
+    <p>The App does not show ads and does not include third-party advertising or analytics SDKs.</p>
+  </div>
+
+  <!-- SECTION 2 -->
+  <div class="policy-section" id="s2">
+    <div class="section-label">Section 02</div>
+    <h2>How We Use Your Information</h2>
+    <p>We use the information described above to:</p>
+    <ul>
+      <li>Provide and maintain the App and the Service, including connecting your audio and video calls.</li>
+      <li>Keep the App working well, by diagnosing errors and adjusting calls to your network connection.</li>
+      <li>Protect the App and its users, by detecting and preventing abuse, fraud, and security problems.</li>
+      <li>Respond to your questions, requests, and complaints.</li>
+      <li>Comply with applicable laws and legal requests.</li>
+    </ul>
+  </div>
+
+  <!-- SECTION 3 -->
+  <div class="policy-section" id="s3">
+    <div class="section-label">Section 03</div>
+    <h2>Disclosure of Your Information</h2>
+    <p>We may share information in these situations:</p>
+    <ul>
+      <li><strong>With other meeting participants:</strong> Your audio, video, and any name or details you enter are visible to the people in your meeting.</li>
+      <li><strong>With service providers:</strong> Companies that host the Service (such as Vercel) and provide the infrastructure that connects calls process technical data on our behalf.</li>
+      <li><strong>For legal reasons:</strong> When required by law, court order, or a valid request from a public authority, or to protect the rights, safety, or property of HaiMeet, our users, or others.</li>
+      <li><strong>For business transfers:</strong> In connection with a merger, sale, or acquisition of all or part of our business.</li>
+      <li><strong>With your consent:</strong> For any other purpose, when you agree to it.</li>
+    </ul>
+  </div>
+
+  <!-- SECTION 4 -->
+  <div class="policy-section" id="s4">
+    <div class="section-label">Section 04</div>
+    <h2>Retention and Deletion</h2>
+    <p>The live audio and video streams of a call are passed between participants while the call is in progress, and the App does not store them.</p>
+    <p>Like any in-app browser, the App may keep cached files, cookies, and local storage on your device so the Service loads faster and remembers your settings. You can remove this at any time in Android <strong>Settings › Apps › HaiMeet › Storage › Clear data</strong>, or by uninstalling the App.</p>
+    <p>Technical logs held by the Service and its hosting provider are kept only as long as needed for security, diagnostics, and legal obligations. To ask us to delete information we hold about you, contact our Grievance Officer in Section 10.</p>
+  </div>
+
+  <!-- SECTION 5 -->
+  <div class="policy-section" id="s5">
+    <div class="section-label">Section 05</div>
+    <h2>Security of Your Information</h2>
+    <p>The App connects to the Service over HTTPS, blocks insecure (non-HTTPS) content, and passes camera and microphone access only to the HaiMeet Service. While we work to protect your information with commercially reasonable measures, no method of transmission over the Internet or electronic storage is 100% secure, and we cannot guarantee absolute security.</p>
+  </div>
+
+  <!-- SECTION 6 -->
+  <div class="policy-section" id="s6">
+    <div class="section-label">Section 06</div>
+    <h2>Your Rights and Choices</h2>
+    <p>You are in control of how the App uses your device:</p>
+    <ul>
+      <li><strong>Permissions:</strong> Allow or deny camera and microphone access when asked, and change your choice later in Android Settings.</li>
+      <li><strong>Local data:</strong> Clear the App’s stored data or uninstall the App at any time.</li>
+      <li><strong>Your information:</strong> Ask us for access to, correction of, or deletion of information we hold about you, and withdraw any consent you gave us.</li>
+    </ul>
+    <p style="margin-top:10px;">Depending on where you live, you may have additional rights under applicable law, including India’s Information Technology Act, 2000 and Digital Personal Data Protection Act, 2023. To use any of these rights or to make a complaint, contact our Grievance Officer in Section 10.</p>
+  </div>
+
+  <!-- SECTION 7 -->
+  <div class="policy-section" id="s7">
+    <div class="section-label">Section 07</div>
+    <h2>Links to Other Websites</h2>
+    <p>Links inside the Service that lead to other websites open in your device’s browser or another app, outside of HaiMeet. We have no control over, and take no responsibility for, the content, privacy policies, or practices of those sites. We encourage you to read the privacy policy of every site you visit.</p>
+  </div>
+
+  <!-- SECTION 8 -->
+  <div class="policy-section" id="s8">
+    <div class="section-label">Section 08</div>
+    <h2>Children’s Privacy</h2>
+    <p>The App is not directed to anyone under the age of 13, and we do not knowingly collect personal information from children under 13. Under India’s Digital Personal Data Protection Act, 2023, a person under 18 is treated as a child, so if you are under 18 please use the App only with the permission and supervision of a parent or guardian.</p>
+    <p>If you are a parent or guardian and believe your child has given us personal information, please contact us. If we learn that we have collected personal information from a child without the required parental consent, we will delete it.</p>
+  </div>
+
+  <!-- SECTION 9 -->
+  <div class="policy-section" id="s9">
+    <div class="section-label">Section 09</div>
+    <h2>Changes to This Privacy Policy</h2>
+    <p>We may update this Privacy Policy from time to time. When we do, we will post the new version on this page and change the “Last Updated” date. For significant changes, we will also show a notice in the App or on the Service before they take effect.</p>
+    <p>Please review this Policy periodically. Changes are effective when they are posted on this page.</p>
+  </div>
+
+  <!-- SECTION 10 -->
+  <div class="policy-section" id="s10">
+    <div class="section-label">Section 10</div>
+    <h2>Grievance Officer</h2>
+    <p>If you have questions, requests, or concerns about this Privacy Policy or how your information is handled, please contact our Grievance Officer:</p>
+    <div class="contact-card">
+      <h3>Contact Our Grievance Officer</h3>
+      <div class="contact-row">
+        <div class="contact-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          <span><strong>Subhojit Haldar</strong></span>
+        </div>
+        <div class="contact-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <a href="mailto:Business.tizongaming@gmail.com">Business.tizongaming@gmail.com</a>
+        </div>
+        <div class="contact-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>West Bengal, India</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 11 -->
+  <div class="policy-section" id="s11">
+    <div class="section-label">Section 11</div>
+    <h2>Copyright</h2>
+    <p>Copyright © 2026 <strong>HaldarAi</strong>. All rights reserved. The content of this Privacy Policy is the intellectual property of HaldarAi and may not be reproduced without permission.</p>
+  </div>
+
+</main>
+
+<footer>
+  <span>HaiMeet</span> · Privacy Policy · Last Updated November 11, 2026 · Copyright © 2026 HaldarAi
+</footer>
+
+</body>
+</html>
